@@ -1,16 +1,50 @@
 * {
   margin: 0;
 }
-.app{
+
+.app {
   background-color: #fafafa;
+  height: 100vh;
 }
-.app_header {
-  background-color: white;
-  object-fit: contain;
+
+.app__posts {
   padding: 20px;
-  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
 }
-.app_signup{
+
+.app__postsRight {
+  margin-left: 40px;
+}
+
+.app__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__headerImage {
+  object-fit: contain;
+}
+
+.app__signup {
   display: flex;
   flex-direction: column;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 640px) {
+  .app__posts {
+    flex-wrap: wrap;
+  }
+
+  .app__postsRight {
+    margin: 0;
+  }
 }
